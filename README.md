@@ -10,8 +10,15 @@ Board is simply a text file that the user may edit to create new boards. 0's are
 <h1>How to use</h2>
 Running the program is relatively straightforward. Place both files into the same directory and run main.cpp in an IDE such as VS Code by calling the file in the terminal such as:
 
-***
+```
 g++ main.cpp
-***
+```
+Followed by:
+```
+./a.out
+```
 
-The program should output the solution to the board 
+The program should output the solution to the terminal. 
+
+<h1>Changing start and end states</h2>
+The user may change the start and end states for the agent by changing the parameters in the main.cpp file. Init and goal are the variables to change and must be located within the board or the program will not run. Further functionality may be added later to support user input.
