@@ -172,3 +172,24 @@ string CellString(State cell) {
     // and "🏁   " for kFinish.
     default: return "0   "; 
   }
+}
+
+
+void PrintBoard(const vector<vector<State>> board) {
+  for (int i = 0; i < board.size(); i++) {
+    for (int j = 0; j < board[i].size(); j++) {
+      cout << CellString(board[i][j]);
+    }
+    cout << "\n";
+  }
+}
+
+#include "test.cpp"
+
+int main() {
+  int init[2]{0, 0};
+  int goal[2]{2, 9};
+  auto board = ReadBoardFile("1.board");
+  auto solution = Search(board, init, goal);
+  PrintBoard(solution);
+}
